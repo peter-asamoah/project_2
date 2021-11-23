@@ -53,9 +53,11 @@ public class Register {
 
     public void getCount() {
         Map<ServiceLevel, Long> collect =
-                ClientRegister.stream().collect(Collectors.groupingBy(Client::getServiceLevel, Collectors.counting()));
+                ClientRegister
+                        .stream()
+                        .collect(Collectors.groupingBy(Client::getServiceLevel, Collectors.counting()));
 
-            System.out.println(collect);
+        System.out.println(collect);
 
 
     }
